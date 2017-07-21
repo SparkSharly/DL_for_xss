@@ -7,7 +7,7 @@ from processing import build_dataset
 from utils import init_session
 from MLP import test
 init_session()
-batch_size=400
+batch_size=350
 epochs_num=1
 process_datas_dir="file\\process_datas.pickle"
 log_dir="log\\LSTM.log"
