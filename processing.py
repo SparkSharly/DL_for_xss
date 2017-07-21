@@ -58,6 +58,7 @@ def pre_process():
     with open(process_datas_dir,"wb") as f:
         pickle.dump(process_datas,f)
     print("Preprocessing data over!")
+    print("Saved datas and labels to ",process_datas_dir)
 def build_dataset(batch_size):
     with open(process_datas_dir, "rb") as f:
         process_datas = pickle.load(f)
