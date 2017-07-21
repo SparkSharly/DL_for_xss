@@ -11,7 +11,6 @@ from sklearn.metrics import precision_score,recall_score
 init_session()
 batch_size=500
 epochs_num=1
-process_datas_dir="file\\process_datas.pickle"
 log_dir="log\\MLP.log"
 model_dir="file\\MLP_model"
 def train(train_generator,train_size,input_num,dims_num):
@@ -38,7 +37,7 @@ def train(train_generator,train_size,input_num,dims_num):
     model.save(model_dir)
     end=time.time()
     print("Over train job in %f s"%(end-start))
-def test(test_generator,test_size,input_num,dims_num):
+def test(model_dir,test_generator,test_size,input_num,dims_num,batch_size):
     model=load_model(model_dir)
     labels_pre=[]
     labels_true=[]
@@ -71,4 +70,4 @@ def test(test_generator,test_size,input_num,dims_num):
 if __name__=="__main__":
     train_generator, test_generator, train_size, test_size, input_num, dims_num=build_dataset(batch_size)
     train(train_generator,train_size,input_num,dims_num)
-    test(test_generator,test_size,input_num,dims_num)
+    test(model_dir,test_generator,test_size,input_num,dims_num)
