@@ -70,4 +70,5 @@ def test(model_dir,test_generator,test_size,input_num,dims_num,batch_size):
 if __name__=="__main__":
     train_generator, test_generator, train_size, test_size, input_num, dims_num=build_dataset(batch_size)
     train(train_generator,train_size,input_num,dims_num)
-    test(model_dir,test_generator,test_size,input_num,dims_num)
+    test(model_dir,test_generator,test_size,input_num,dims_num,batch_size)
+
