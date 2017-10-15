@@ -1,6 +1,9 @@
 Detection  XSS  with Deep Learning 
 ====
 
+&emsp;Blog：[http://www.webber.tech/posts/使用深度学习检测XSS/]()
+
+&emsp;后续：[http://www.webber.tech/posts/使用深度学习检测XSS(续)/]()
 * 环境
 
 > tensorflow
